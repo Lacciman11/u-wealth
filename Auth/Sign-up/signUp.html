@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signUp.css">
+    <title>U-Wealth</title>
+</head>
+<body>
+
+    <div>
+        <img src="./../Image/u-wealth logo.png" alt="" width="350px" height="350px">
+    </div>
+
+    <div class="headingContainer">
+        <h1>Get a U-Wealth Account</h2>
+    </div>
+
+    <form action="" id="signUpForm">
+        <input type="text" id="fName" placeholder="First Name" required>
+        <br>
+        <input type="text" id="lName" placeholder="Last name">
+        <br>
+        <input type="text" id="mNumber" placeholder="Mobile number" required>
+        <br>
+        <input type="text" id="nickName" placeholder="Nick name">
+        <br>
+        <input type="g" id="gender" placeholder="Gender">
+        <br>
+        <input type="date" id="dob" placeholder="Date of Birth">
+        <br>
+        <input type="text" id="email" placeholder="Email" required>
+        <br>
+        <input type="password" id="password" placeholder="Password" required>
+        <br>
+        <input type="password" id="cPassword" placeholder="Confirm Password" required>
+        <br>
+        <button type="submit" id="signUpBtn">Sign Up</button>    
+    </form>
+
+
+    <div class="terms">
+        <input type="checkbox" required> 
+    <p>I have read, understood and agreed to 
+        <br>the <a href="">Terms & Conditions</a> and 
+        <a href="">Privacy Policy.</a>
+    </p>
+    </div>
+
+    <div class="toLogIn">
+        <p>Already have an U-Wealth Account?</p>
+        <a href="./../Sign-in/signIn.html">Click here to Log in</a>
+    </div>
+
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+          <h2>Do you want to log in?</h2>
+          <button id="yesBtn">Yes</button>
+          <button id="noBtn">No</button>
+        </div>
+      </div>
+
+      <div id="termsModal" class="modal2">
+        <div>
+            <h2>You must agree to the <br>
+                Terms & Conditions and <br>
+                Privacy Policy.</h2>
+            <button class="close-btn">Close</button>
+        </div> 
+        
+      </div>
+
+    
+    <script src="signUp.js"></script>
+</body>
+</html>

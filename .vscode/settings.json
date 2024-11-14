@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.https": {
+      "key": "C:/Users/user/Documents/certs/localhost-cert.pfx",
+      "passphrase": "your-password"
+    }
+  }
+  
