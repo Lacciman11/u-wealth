@@ -1,45 +1,53 @@
 const logInBtn = document.querySelector('.login');
-const profilePic = document.getElementById('profilePic');
-const profilePicUpload = document.getElementById('profilePicUpload');
+const profile = document.querySelector('.profile')
 const welcomeText = document.getElementById('welcomeText');
 
 const getUser = () => {
-    const savedUser = sessionStorage.getItem('userData');
-    const user = JSON.parse(savedUser);
-    return user;
+    try {
+        const savedUser = sessionStorage.getItem('userData');
+        return savedUser ? JSON.parse(savedUser) : null;
+    } catch (error) {
+        console.error("Error parsing user data from sessionStorage", error);
+        return null;
+    }
 };
+
+
 
 const loggedInUser = getUser();
 
-console.log(loggedInUser)
-
-
-welcomeText.innerText = `Hi, ${loggedInUser.firstName.toUpperCase()}` || 'Guest';
-logInBtn.style.display = 'none';
-
-profilePic.addEventListener('click', function() {
-    
-    profilePicUpload.click();
-});
-
-profilePicUpload.addEventListener('change', function(event) {
-    const file = event.target.files[0];
-
-    if (file) {
-        const reader = new FileReader();
-
-        
-        reader.onload = function(e) {
-            const imageUrl = e.target.result;  
-            profilePic.src = imageUrl;  
-
-            localStorage.setItem('userProfilePic', imageUrl);
-
-            console.log('Profile picture updated!');
-        };
-
-        reader.readAsDataURL(file);
+if (loggedInUser) {
+    if (welcomeText) {
+        welcomeText.innerText = `Hi, ${loggedInUser.firstName?.toUpperCase() || 'User'}`;
     }
-});
+    if (logInBtn) {
+        logInBtn.style.display = 'none';
+    }
+    if (profile) {
+        profile.style.display = 'inline-block';
+    }
+} else {
+    if (welcomeText) {
+        welcomeText.innerText = 'Hi, Guest';
+    }
+    if (logInBtn) {
+        logInBtn.style.display = 'block';
+    }
+    if (profile) {
+        profile.style.display = 'none';
+    }
+}
 
+// Password account balance
+const viewBalance = document.getElementById('eyes');
+const balanceInput = document.getElementById('balance');
+if (viewBalance && balanceInput) {
+    viewBalance.addEventListener('click', () => {
+        if (balanceInput.type === 'password') {
+            balanceInput.type = 'text';
+        } else {
+            balanceInput.type = 'password';
+        }
+    });  
+}
 

@@ -14,7 +14,6 @@
                 <div class="profile">
                     <img id="profilePic" src="./../Image/profile pic default.png" alt="" class="profile-pic" />
                 </div>
-                <input type="file" id="profilePicUpload" class="profile-pic-upload" accept="image/*" style="display: none;">
             <div class="login">
                 <button class="login"><a href="./../Sign-in/signIn.html">Log in</a></button>
             </div>
@@ -22,7 +21,9 @@
         
         <div class="headerRight">
             <div>
-                <img src="./../Image/headphone-removebg-preview.svg" alt="" width="37px">
+                <a href="#">
+                    <img src="./../Image/headphone-removebg-preview.svg" alt="" width="37px">
+                </a>
             </div>
             <div>
                 <img src="./../Image/scan-removebg-preview.svg" alt="" width="25px">
@@ -37,7 +38,11 @@
 <section class="checkBalance">
     <div class="availableBalance">
         <p>Available Balance</p>
-        <h4 class="balance">****</h4>
+        <!-- <h4 class="balance">****</h4> -->
+         <div class="amntHolder">
+            <input type="password" value="#00.00" id="balance">
+            <img src="./../Image/amounteyes-removebg-preview.svg" alt="" width="30px" id="eyes">
+         </div>
     </div>
     <div class="history">
        <a href="#">Transaction History </a>

@@ -24,10 +24,29 @@ header{
 .left{
     display: flex;
     align-items: center;
+    gap: 5px;
+}
+
+.login{
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    padding: 5px 10px; 
+    transition: all 0.3s ease;  
+}
+
+.login:hover{
+    transform: scale(1.1);
+}
+
+.login a{
+    text-decoration: none;
+    color: var(--secondary-color);
+
 }
 
 .profile {
-    display: inline-block;
+    display: none;
     margin-left: 15px;
 }
 
@@ -50,6 +69,15 @@ header{
     gap: 5px;
 }
 
+.headerRight img{
+    transition: all 0.3s ease;
+}
+
+.headerRight img:hover{
+    transform: scale(1.2);
+
+}
+
 .checkBalance{
     display: flex;
     background-color: var(--primary-color);
@@ -68,12 +96,25 @@ header{
     align-items: center;
 }
 
+.amntHolder{
+    display: flex;
+    justify-content: center;
+}
+
+.amntHolder input{
+    text-align: center;
+    font-weight: bolder;
+    width: 35%;
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-color);
+}
+
 
 .history{
     display: flex;
     align-items: start;
 }
-
 
 .history > a{
     text-decoration: underline;
@@ -82,6 +123,11 @@ header{
     text-decoration-style: solid;
     margin-top: 17px;
     color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.history a:hover{
+    transform: scale(1.05);
 }
 
 .transactions{

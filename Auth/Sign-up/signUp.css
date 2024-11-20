@@ -31,7 +31,7 @@ form{
     flex-direction: column;
 }
 
-form > input{
+form  input{
     margin: 10px 0;
     background-color: rgba(201, 194, 194, 0.164);
     border: none;
@@ -39,6 +39,13 @@ form > input{
     width: 100%;
     height:10vh ;
     padding: 10px;
+}
+
+form img{
+    position: relative;
+    left: 90%;
+    bottom: 60px;
+    margin: 0;
 }
 
 button{
